@@ -75,8 +75,7 @@ const App = () => {
                 const mainresponse=await response.json();
                 console.log(mainresponse);
             }
-			const columns = Object.keys(parsedData[0]);
-			setData(columns);
+			document.getElementById('atfinish').style.display="block";
 		};
 		reader.readAsText(file);
 	};
@@ -99,6 +98,7 @@ const App = () => {
 				{error ? error : data.map((col,
 				idx) => <div key={idx}>{col}</div>)}
 			</div>
+			<div id="atfinish" className="sujal" style={{display:"none"}}>Finished!!</div>
 		</div>
 	);
 };
