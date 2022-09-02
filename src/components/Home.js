@@ -124,7 +124,7 @@ document.getElementById('delayprocess').style.display="none";
 	return (
 		<div>
 			<label htmlFor="csvInput" style={{ display: "block" }}>
-				Enter CSV File
+				Choose CSV File
 			</label>
 			<input
 				onChange={handleFileChange}
@@ -133,7 +133,7 @@ document.getElementById('delayprocess').style.display="none";
 				type="File"
 			/>
 			<div>
-				<button onClick={handleParse}>Parse</button>
+				<button onClick={handleParse}>Update Interakt</button>
 			</div>
 			<div style={{ marginTop: "3rem" }}>
 				{error ? error : data.map((col,
